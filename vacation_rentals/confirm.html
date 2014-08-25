@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html ng-app>
+ <head>
+
+	<meta charset="utf-8">
+	<title>My First Bootstrap Project</title> 
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/my.css"/>
+	<style>
+	.form-group{
+		font-weight : bold;
+	}
+	</style>
+</head>
+ <body>
+
+ <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<!-- First Section-->
+	  <nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Vacation Rentals</a>
+		</div>
+		<div>
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="http://localhost/boot/">Home</a></li>
+			<li><a href="http://localhost/boot/top.html">Top Destinations</a></li>
+			<li class="dropdown"><a href="http://localhost/boot/contact.html" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+		<li><a href="http://localhost/boot/contact.html">Company Details</a></li>
+		<li class="divider"></li>
+		<li><a href="http://localhost/boot/contact.html">Contact Us</a></li>
+		</ul>
+		</li>
+		</ul>
+		</div>
+		
+
+		<ul class="nav navbar-nav navbar-right">
+		<li><a href="http://localhost/boot/book.html">Book Tickets</a></li>
+		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Reservation<b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li><a href="#">Cancel</a></li>
+				<li><a href="#">Confirm</a></li>
+			</ul>
+			</li>
+		</ul>
+
+		<form class="navbar-form navbar-right" role="search">
+		<div class="form-group"><input type="text" id="search_key" placeholder="Search" class="form-control"></div>
+		<div class="form-group"><button type="submit" class="btn btn-default">Submit</div>
+		</form>
+	</div>	
+	  </nav>
+
+	<!-- Middle Section -->
+	<div class="container" ng-controller="ExampleController">	
+	<div class="row">
+			<div class="col-md-6">
+			
+			<h1 style="color: coral;">Cancel Booking</h1>
+				<form id="cancel" role="form" ng-show="myVar1" novalidate>
+					<div class="form-group">Reservation Number : <input  type="text" ng-model="booking_id"/></div>
+					<div class="form-group" style="margin-left: 85px;">Email Id : <input  type="email" ng-model="email"/></div>
+					<div class="form-group"><button class="btn btn-danger" style="margin-left: 78px;" ng-click="cancelOrder()">Cancel Booking</button></div>
+				</form>
+				<span style="font-weight: bold; color: red;">{{ cancel_result }}</span>
+				</div>
+				
+				<div class="col-md-6">
+				<h1 style="color: green;">Confirm Booking</h1>
+				<form id="confirm" role="form" ng-show="myVar2"novalidate>
+					<div class="form-group">Reservation Number : <input  type="text" ng-model="booking_id"/></div>
+					<div class="form-group" style="margin-left: 85px;">Email Id : <input  type="email" ng-model="email"/></div>
+					<div class="form-group"><button class="btn btn-success"  style="margin-left: 78px;" ng-click="confirmOrder()">Confirm Booking</button></div>
+				</form>
+				<span style="font-weight: bold; color: blue;">{{ confirm_result }}</span>
+				</div>
+				
+			</div>
+		</div>
+    </div>
+	
+	<!-- Last Section-->
+	<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<p>@2014</p>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav nav-pills">
+					<li><a href="http://localhost/boot/contact.html">About Us</a></li>
+					<li><a href="http://localhost/boot/contact.html#support">Support 24x7</a></li>
+					<li><a href="http://localhost/boot/contact.html">Privacy Policy</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h3 class="text-right">
+					Vacation Rentals
+				</h3>
+			</div>
+		</div>
+	</div>
+
+	</footer>
+ 
+	<script type="text/javascript">
+	
+	function ExampleController($scope){
+	
+			$scope.myVar1 = true;$scope.myVar2 = true;
+			$scope.cancelOrder = function(){
+					$scope.myVar1 = !$scope.myVar1;
+					$scope.cancel_result = "Booking cancelled";
+			};
+	
+			$scope.confirmOrder = function(){
+					$scope.myVar2 = !$scope.myVar2;
+					$scope.confirm_result = "Booking confirmed";
+			};
+	}
+	</script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+ </body>
+ </html>

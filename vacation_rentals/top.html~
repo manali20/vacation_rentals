@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My First Bootstrap Project</title> 
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/my.css"/>
+</head>
+<body>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/carousel.js"></script>
+
+	<!-- First Section-->
+	  <nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Vacation Rentals</a>
+		</div>
+		<div>
+		<ul class="nav navbar-nav">
+			<li><a href="http://localhost/boot/">Home</a></li>
+			<li class="active"><a href="http://localhost/boot/top.html">Top Destinations</a></li>
+			<li class="dropdown"><a href="http://localhost/boot/contact.html" class="dropdown-toggle" data-toggle="dropdown">About Us<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+		<li><a href="http://localhost/boot/contact.html">Company Details</a></li>
+		<li class="divider"></li>
+		<li><a href="http://localhost/boot/contact.html">Contact Us</a></li>
+		</ul>
+		</li>
+		</ul>
+		</div>
+		
+
+		<ul class="nav navbar-nav navbar-right">
+		<li><a href="http://localhost/boot/book.html">Book Tickets</a></li>
+		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Reservation<b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li><a href="#">Cancel</a></li>
+				<li><a href="#">Confirm</a></li>
+			</ul>
+			</li>
+		</ul>
+
+		<form class="navbar-form navbar-right" role="search">
+		<div class="form-group"><input type="text" id="search_key" placeholder="Search" class="form-control"></div>
+		<div class="form-group"><button type="submit" class="btn btn-default">Submit</div>
+		</form>
+	</div>	
+	  </nav>
+
+	<!-- Second Section-->
+	<div class="container">
+	<div id="myCarousel" class="carousel slide">
+   <!-- Carousel indicators -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+   </ol>   
+   <!-- Carousel items -->
+   <div class="carousel-inner">
+      <div class="item active">
+         <img src="http://localhost/boot/images/slide1.jpg" alt="First slide">
+         <div class="carousel-caption">Glacier National Park, Montana</div>
+      </div>
+      <div class="item">
+         <img src="http://localhost/boot/images/slide2.jpg" alt="Second slide">
+         <div class="carousel-caption">Natural Pool - Santorini, Greece</div>
+      </div>
+      <div class="item">
+         <img src="http://localhost/boot/images/slide3.jpg" alt="Third slide">
+         <div class="carousel-caption">Antelope Canyon, USA</div>
+      </div>
+	<div class="item">
+         <img src="http://localhost/boot/images/slide4.jpg" alt="Third slide">
+         <div class="carousel-caption">Japanese Gardens in San Francisco</div>
+      </div>
+   </div>
+   <!-- Carousel nav -->
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev">&lsaquo;</a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next">&rsaquo;</a>
+</div> 
+	</div>
+	<!-- Third Section-->
+	<!-- Forth Section-->
+	<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<p>@2014</p>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav nav-pills">
+					<li><a href="http://localhost/boot/contact.html">About Us</a></li>
+					<li><a href="http://localhost/boot/contact.html">Support 24x7</a></li>
+					<li><a href="http://localhost/boot/contact.html">Privacy Policy</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h3 class="text-right">
+					Vacation Rentals
+				</h3>
+			</div>
+		</div>
+	</div>
+
+	</footer>
+</body>
+</html>
